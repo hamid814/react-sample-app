@@ -1,6 +1,6 @@
 export default (state, action) => {
   switch (action.type) {
-    case 'set-active-page':
+    case 'set-data':
       return {
         ...state,
         data: action.payload
