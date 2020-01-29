@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import State from './context/State'
-import Context from './context/Context'
+import State from './context/State';
+import Context from './context/Context';
 
 import * as serviceWorker from './serviceWorker';
 
