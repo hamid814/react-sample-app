@@ -20,7 +20,7 @@ const State = props => {
 
   // Get data
   const getData = () => {
-    axios.get('/api/NPP-dcbq7OjykP')
+    axios.get('http://ninipay.com/api/NPP-dcbq7OjykP')
       .then(res => {
         dispatch({
           type: 'get-data',
