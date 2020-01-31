@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const ProductItem = ({ product }) => {
   return (
@@ -13,9 +14,11 @@ const ProductItem = ({ product }) => {
         product.sell_price
       }
       <img src={product.list_image_url} alt={product.title}/>
-      <button>
-        مشاهد/خرید
-      </button>
+      <Link to={`/product/${product.id}`}>
+        <button>
+          مشاهد/خرید
+        </button>
+      </Link>
     </div>
   )
 }

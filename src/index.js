@@ -1,10 +1,11 @@
 import React, { useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.scss';
 
 import Navbar from './components/layout/Navbar';
 import Products from './components/pages/products/Products';
+import Product from './components/pages/product/Product';
 
 import State from './context/State';
 import Context from './context/Context';
@@ -20,10 +21,15 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      <Navbar />
-      <Products />
-    </>
+    <Router>
+      <>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Products} />
+          <Route exact path='/Product/:product_id' component={Product} />
+        </Switch>
+      </>
+    </Router>
   );
 }
 
