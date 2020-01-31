@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid red;
+
+  .menu {
+    font-size: 100%;
+  }
+  
+  .logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    
+    span {
+      cursor: pointer;
+      border: 1px solid red;
+      
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  
+  .use-data {
+    font-size: 100%;
+  }
+}
