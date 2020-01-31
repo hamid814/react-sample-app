@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import Navbar from './components/layout/Navbar';
+import Products from './components/pages/products/Products';
 
 import State from './context/State';
 import Context from './context/Context';
@@ -11,24 +12,17 @@ import Context from './context/Context';
 import * as serviceWorker from './serviceWorker';
 
 const App = () => {
-  const { data, getData } = useContext(Context)
+  const { getData } = useContext(Context)
 
   useEffect(() => {
     getData()
     // eslint-disable-next-line
   }, [])
 
-  const onButtonClicked = () => {
-    console.log('here')
-  }
-
   return (
     <>
       <Navbar />
-      { data }
-      <button onClick={onButtonClicked}>
-        get data
-      </button>
+      <Products />
     </>
   );
 }

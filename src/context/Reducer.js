@@ -3,7 +3,7 @@ export default (state, action) => {
     case 'get-data':
       return {
         ...state,
-        data: action.payload
+        products: action.payload
       }
     default:
       return state;

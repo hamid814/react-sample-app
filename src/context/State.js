@@ -5,7 +5,6 @@ import Reducer from './Reducer';
 
 const State = props => {
   const initialState = {
-    data: 'hello world',
     products: [],
   };
 
@@ -21,18 +20,13 @@ const State = props => {
 
   // Get data
   const getData = () => {
-    // axios.get('https://jsonplaceholder.typicode.com/todos/1',
-    axios.get('http://ninipay.com/api/NPP-dcbq7OjykP',
-      {
-        // headers: {"Access-Control-Allow-Origin": "*"},
-      }
-    )
+    axios.get('/api/NPP-dcbq7OjykP')
       .then(res => {
-        // dispatch({
-        //   type: '',
-        //   payload: res.data
-        // })
-        console.log(res)
+        dispatch({
+          type: 'get-data',
+          payload: res.data
+        })
+        console.log(res.data)
       })
       .catch(err => {
         console.log(err)
@@ -42,7 +36,6 @@ const State = props => {
   return (
     <Context.Provider
       value={{
-        data: state.data,
         products: state.products,
         getData,
       }}
