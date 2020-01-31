@@ -1,28 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import {Link} from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useContext } from 'react'
+import { Link } from 'react-router-dom';
+
+import Context from '../../../context/Context';
+
+import Loading from '../../layout/Loading';
 
 const Product = ({ match }) => {
-  const [loading, setLoading] = useState(true)
-  const [product, setProduct] = useState(null)
-  
+  const { getSingleProduct, singleProduct: product, loading } = useContext(Context)
+
   useEffect(() => {
-    axios.get(`/api/product/${match.params.product_id}`)
-      .then(res => {
-        setProduct(res.data)
-        setLoading(false)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    
+    getSingleProduct(match.params.product_id)
+
     // eslint-disable-next-line
   }, [])
   
   if(loading) {
     return (
       <>
-        is loading
+        <Loading />
       </>
     )
   } else {
@@ -43,8 +38,6 @@ const Product = ({ match }) => {
         {
           product.title
         }
-
-        <img src="http://ninipay.com/media/product-image/1563873658_27747.jpg" alt="noname"/>
       </>
     )
   }

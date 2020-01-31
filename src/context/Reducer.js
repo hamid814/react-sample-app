@@ -5,6 +5,16 @@ export default (state, action) => {
         ...state,
         products: action.payload
       }
+    case 'set-single-product':
+      return {
+        ...state,
+        singleProduct: action.payload
+      }
+    case 'set-loading':
+      return {
+        ...state,
+        loading: action.payload
+      }
     default:
       return state;
   }

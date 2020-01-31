@@ -6,12 +6,17 @@ import Reducer from './Reducer';
 const State = props => {
   const initialState = {
     products: [],
+    singleProduct: null,
+    loading: true
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
 
   // Get data
-  const getData = () => {
+  const getProducts = () => {
+    
+    setLoading(true);
+    
     axios.get('/api/NPP-dcbq7OjykP')
       .then(res => {
         dispatch({
@@ -25,11 +30,38 @@ const State = props => {
       })
   }
 
+  const getSingleProduct = (id) => {
+
+    setLoading(true);
+
+    axios.get(`/api/product/${id}`)
+      .then(res => {
+        dispatch({
+          type: 'set-single-product',
+          payload: res.data
+        })
+        setLoading(false)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
+  const setLoading = (stat) => {
+    dispatch({
+      type: 'set-loading',
+      payload: stat,
+    })
+  }
+
   return (
     <Context.Provider
       value={{
         products: state.products,
-        getData,
+        singleProduct: state.singleProduct,
+        loading: state.loading,
+        getProducts,
+        getSingleProduct,
       }}
     >
       {props.children}

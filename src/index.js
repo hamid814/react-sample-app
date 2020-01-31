@@ -13,10 +13,10 @@ import Context from './context/Context';
 import * as serviceWorker from './serviceWorker';
 
 const App = () => {
-  const { getData } = useContext(Context)
+  const { getProducts } = useContext(Context)
 
   useEffect(() => {
-    getData()
+    getProducts()
     // eslint-disable-next-line
   }, [])
 
