@@ -1,6 +1,6 @@
 export default (state, action) => {
   switch (action.type) {
-    case 'set-data':
+    case 'get-data':
       return {
         ...state,
         data: action.payload
