@@ -10,9 +10,6 @@ const ProductItem = ({ product }) => {
       {
         product.title
       }
-      {
-        product.sell_price
-      }
       <img src={product.list_image_url} alt={product.title}/>
       <Link to={`/product/${product.id}`}>
         <button>

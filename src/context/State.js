@@ -10,17 +10,9 @@ const State = props => {
 
   const [state, dispatch] = useReducer(Reducer, initialState);
 
-  // eslint-disable-next-line
-  const tempFunc = () => {
-    dispatch({
-      type: 'nothing',
-      paylaod: 'delete this function'
-    })
-  }
-
   // Get data
   const getData = () => {
-    axios.get('http://ninipay.com/api/NPP-dcbq7OjykP')
+    axios.get('/api/NPP-dcbq7OjykP')
       .then(res => {
         dispatch({
           type: 'get-data',

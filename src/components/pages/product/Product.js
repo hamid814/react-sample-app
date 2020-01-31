@@ -31,16 +31,20 @@ const Product = ({ match }) => {
         <Link to="/">
           back
         </Link>
-        
+
         <br/>
       
         single product
 
         <br/>
 
+        <img src={product.list_image_url} alt={product.title}/>
+
         {
           product.title
         }
+
+        <img src="http://ninipay.com/media/product-image/1563873658_27747.jpg" alt="noname"/>
       </>
     )
   }

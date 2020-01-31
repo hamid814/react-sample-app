@@ -10,7 +10,7 @@ const Navbar = () => {
       </div>
       <div className="logo">
         <span>
-          LOGO 4
+          LOGO
         </span>
       </div>
       <div className="user-data">
