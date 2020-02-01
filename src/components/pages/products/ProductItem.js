@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 const ProductItem = ({ product }) => {
-  const rate = Math.floor(Math.random() * 5) + 1;;
+  const rate = Math.floor(Math.random() * 5) + 1;
 
   const ratePanel = useRef(null)
 

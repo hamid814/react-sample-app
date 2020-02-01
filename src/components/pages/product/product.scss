@@ -1,23 +1,64 @@
 .product-page-container {
-  border: 1px solid red;
   width: 80%;
   margin: 20px auto;
   text-align: right;
   background: #f3f3f3;
   padding: 1rem;
   
-  .back {
-    border: 1px solid red;
-  }
-  
   .content {
-    border: 1px solid blue;
     display: flex;
     flex-direction: row-reverse;
     
     .left {
       flex-grow: 1;
       padding: 1.5rem;
+      
+      .rate-panel {
+        position: absolute;
+        display: flex;
+        
+        .dot {
+          width: 15px;
+          height: 10px;
+          border-radius: 20px;
+          margin-right: 3px;
+          
+          &.gold {
+            background: #e9d209;
+          }
+          
+          &.silver {
+            background: #7c7c7c;
+          }
+        }
+      }
+        
+      .title {
+        font-weight: 700;
+        font-size: 130%;
+        cursor: default;
+      }
+
+      .price-panel {
+        margin-top: 12px;
+
+        .main-price {
+          color: #a00a;
+          text-decoration: line-through;
+        }
+      }
+
+      .btn {
+
+        &:hover {
+
+        }
+
+        &.deactive {
+          background: var(--color-8);
+          border-color: var(--color-8);
+        }
+      }
     }
     
     .right {
