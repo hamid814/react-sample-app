@@ -37,7 +37,7 @@ const ProductItem = ({ product }) => {
       </div>
       <div className="content">
         <div className="product-title">
-          <Link to={`/product/${id}`}>
+          <Link to={`${process.env.PUBLIC_URL}/product/${id}`}>
             {
               title
             }
@@ -63,7 +63,7 @@ const ProductItem = ({ product }) => {
 
         </div>
         <div className="btn-panel">
-          <Link to={`/product/${id}`}>
+          <Link to={`${process.env.PUBLIC_URL}/product/${id}`}>
             <button className="btn">
               مشاهده
             </button>

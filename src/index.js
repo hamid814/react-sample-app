@@ -26,8 +26,8 @@ const App = () => {
       <>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Products} />
-          <Route exact path='/Product/:product_id' component={Product} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Products} />
+          <Route exact path={process.env.PUBLIC_URL + '/Product/:product_id'} component={Product} />
         </Switch>
       </>
     </Router>

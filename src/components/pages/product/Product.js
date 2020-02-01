@@ -57,7 +57,7 @@ const Product = ({ match }) => {
       <>
         <div className="product-page-container">
           <div className="back">
-            <Link to="/">
+            <Link to={process.env.PUBLIC_URL + "/"}>
               بازگشت
             </Link>
           </div>
