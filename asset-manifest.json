@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/react-sample-app/static/css/main.1893875f.chunk.css",
-    "main.js": "/react-sample-app/static/js/main.1b8f2590.chunk.js",
-    "main.js.map": "/react-sample-app/static/js/main.1b8f2590.chunk.js.map",
+    "main.css": "/react-sample-app/static/css/main.23f21212.chunk.css",
+    "main.js": "/react-sample-app/static/js/main.2629bcfa.chunk.js",
+    "main.js.map": "/react-sample-app/static/js/main.2629bcfa.chunk.js.map",
     "runtime-main.js": "/react-sample-app/static/js/runtime-main.a5d99a81.js",
     "runtime-main.js.map": "/react-sample-app/static/js/runtime-main.a5d99a81.js.map",
-    "static/js/2.6f926c31.chunk.js": "/react-sample-app/static/js/2.6f926c31.chunk.js",
-    "static/js/2.6f926c31.chunk.js.map": "/react-sample-app/static/js/2.6f926c31.chunk.js.map",
+    "static/js/2.51f75529.chunk.js": "/react-sample-app/static/js/2.51f75529.chunk.js",
+    "static/js/2.51f75529.chunk.js.map": "/react-sample-app/static/js/2.51f75529.chunk.js.map",
     "index.html": "/react-sample-app/index.html",
-    "precache-manifest.63f6f739c8488e88b773096e3dc622f5.js": "/react-sample-app/precache-manifest.63f6f739c8488e88b773096e3dc622f5.js",
+    "precache-manifest.dfd61364297c89d4db323b2f97ca6c8e.js": "/react-sample-app/precache-manifest.dfd61364297c89d4db323b2f97ca6c8e.js",
     "service-worker.js": "/react-sample-app/service-worker.js",
-    "static/css/main.1893875f.chunk.css.map": "/react-sample-app/static/css/main.1893875f.chunk.css.map",
-    "static/js/2.6f926c31.chunk.js.LICENSE": "/react-sample-app/static/js/2.6f926c31.chunk.js.LICENSE"
+    "static/css/main.23f21212.chunk.css.map": "/react-sample-app/static/css/main.23f21212.chunk.css.map",
+    "static/js/2.51f75529.chunk.js.LICENSE": "/react-sample-app/static/js/2.51f75529.chunk.js.LICENSE",
+    "static/media/font.css": "/react-sample-app/static/media/IRANSansWeb_Medium.c18ca268.eot",
+    "static/media/logo.png": "/react-sample-app/static/media/logo.db1ee89e.png",
+    "static/media/user.png": "/react-sample-app/static/media/user.98f7ba11.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a5d99a81.js",
-    "static/js/2.6f926c31.chunk.js",
-    "static/css/main.1893875f.chunk.css",
-    "static/js/main.1b8f2590.chunk.js"
+    "static/js/2.51f75529.chunk.js",
+    "static/css/main.23f21212.chunk.css",
+    "static/js/main.2629bcfa.chunk.js"
   ]
 }
