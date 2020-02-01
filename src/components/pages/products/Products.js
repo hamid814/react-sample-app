@@ -9,10 +9,10 @@ import DisplayType from './DisplayType'
 import './products.scss';
 
 const Products = () => {
-  const { products } = useContext(Context)
+  const { products, productsDisplayType } = useContext(Context)
   
   return (
-    <div className="all-products">
+    <div className={`all-products display-${productsDisplayType}`}>
       <div className="title">
         همه محصولات
       </div>
@@ -20,11 +20,13 @@ const Products = () => {
         <Filter />
         <DisplayType />
       </div>
-      {
-        products.map(product => (
-          <ProductItem key={product.id} product={product} />
-        ))
-      }
+      <div className="products-content">
+        {
+          products.map(product => (
+            <ProductItem key={product.id} product={product} />
+          ))
+        }
+      </div>
     </div>
   )
 }

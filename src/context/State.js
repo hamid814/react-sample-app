@@ -7,7 +7,8 @@ const State = props => {
   const initialState = {
     products: [],
     singleProduct: null,
-    loading: true
+    loading: true,
+    productsDisplayType: 'table', // values: 'table' / 'row'
   };
 
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -54,14 +55,23 @@ const State = props => {
     })
   }
 
+  const setProductsDisplayType = (type) => {
+    dispatch({
+      type: 'set-products-display-type',
+      payload: type
+    })
+  }
+
   return (
     <Context.Provider
       value={{
         products: state.products,
         singleProduct: state.singleProduct,
         loading: state.loading,
+        productsDisplayType: state.productsDisplayType,
         getProducts,
         getSingleProduct,
+        setProductsDisplayType
       }}
     >
       {props.children}

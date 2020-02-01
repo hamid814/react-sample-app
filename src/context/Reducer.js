@@ -15,6 +15,11 @@ export default (state, action) => {
         ...state,
         loading: action.payload
       }
+    case 'set-products-display-type':
+      return {
+        ...state,
+        productsDisplayType: action.payload
+      }
     default:
       return state;
   }

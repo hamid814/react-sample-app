@@ -3,6 +3,49 @@
   margin: 30px auto;
   text-align: right;
   
+  &.display-row {
+    
+  }
+  
+  &.display-table {
+    
+    .products-content {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+
+      .product-item {
+        margin: 0;
+        display: inline;
+
+        .image {
+          margin: 0 auto;
+          width: 60%;
+        }
+
+        .content {
+          margin: 0;
+          padding: 30px;
+
+          .product-title {
+            border: none;
+            padding: 0;
+          }
+
+          .btn-panel {
+            position: relative;
+            display: block;
+            bottom: 0;
+            left: 0;
+            text-align: left;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  
   .control-panel {
     margin-top: 10px;
     padding-left: 40px;
@@ -95,6 +138,28 @@
 
       .product-desc {
         margin-top: 0.2rem;
+      }
+      
+      .rate-panel {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        display: flex;
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 20px;
+          margin-right: 3px;
+
+          &.gold {
+            background: #ebd300;
+          }
+
+          &.silver {
+            background: #7c7c7c;
+          }
+        }
       }
       
       .btn-panel {

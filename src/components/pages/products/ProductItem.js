@@ -1,24 +1,34 @@
-import React, { useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 const ProductItem = ({ product }) => {
-  const rate = 4;
+  const rate = 3;
 
-  let rateIcones;
+  const ratePanel = useRef(null)
 
   useEffect(() => {
     for(let i = 0; i < rate; i++) {
-      const star = document.createElement('i')
+      const star = document.createElement('div')
+      star.classList.add('dot')
+      star.classList.add('gold')
+      ratePanel.current.appendChild(star)
     }
 
     for(let i = 0; i < 5 - rate; i++) {
-      console.log(i)
+      const star = document.createElement('div')
+      star.classList.add('dot')
+      star.classList.add('silver')
+      ratePanel.current.appendChild(star)
     }
     
     // eslint-disable-next-line
   }, [])
   
   const { id, title, list_image_url, sell_price, main_price, can_add_to_cart } = product;
+
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   
   return (
     <div className="product-item">
@@ -37,19 +47,19 @@ const ProductItem = ({ product }) => {
           <div className="main-price">
             {
               main_price &&
-              `قیمت: ${main_price}`
+              `قیمت: ${numberWithCommas(main_price)} ریال`
             }
           </div>
           <div className="sell-price">
             {
-              `قیمت: ${sell_price}`
+              `قیمت: ${numberWithCommas(sell_price)} ریال`
             }
           </div>
         </div>
         <div className="product-desc">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
         </div>
-        <div className="rate-panel">
+        <div className="rate-panel" ref={ratePanel}>
 
         </div>
         <div className="btn-panel">
