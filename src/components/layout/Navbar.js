@@ -43,9 +43,9 @@ const Navbar = () => {
         <div className="menu-item">
           <div className="background-layer"></div>
           <div className="menu-item-text">
-            محصولات
+            محضولات
           </div>
-          محصولات
+          محضولات
         </div>
         <div className="menu-item">
           <div className="background-layer"></div>

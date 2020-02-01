@@ -56,9 +56,6 @@ const Product = ({ match }) => {
     return (
       <>
         <div className="product-page-container">
-          <div className="alert">
-
-          </div>
           <div className="back">
             <Link to="/">
               بازگشت
