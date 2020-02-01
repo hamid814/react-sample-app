@@ -60,18 +60,36 @@
       
       img {
         width: 94%;
+        border-bottom-right-radius: 999px;
+        border-top-right-radius: 999px;
+        border-bottom-left-radius: 999px;
       }
     }
     
     .content {
       position: relative;
-      border: 1px solid blue;
       flex-grow: 1;
       margin-right: 20px;
       padding: 20px;
 
       .product-title {
+        border-right: 5px solid #986651;
+        padding-right: 10px;
+        margin-bottom: 5px;
+        font-size: 120%;
+        font-weight: 700;
+      }
 
+      .product-price {
+
+        .main-price {
+          color: #a00a;
+          text-decoration: line-through;
+        }
+
+        .sell-price {
+          cursor: default;
+        }
       }
 
       .product-desc {
@@ -90,6 +108,17 @@
             background: #4b3f2f;
             border-color: #4b3f2f;
             color: #f4f4f4;
+          }
+
+          &.deactive {
+            opacity: 0.7;
+            background: #fd958d;
+            border-color: #fd958d;
+            cursor: not-allowed;
+
+            &:hover {
+              color: initial;
+            }
           }
         }
       }

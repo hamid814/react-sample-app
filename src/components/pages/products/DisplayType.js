@@ -19,7 +19,7 @@ const DisplayType = () => {
       </button>
       <button className={`btn ${type === 'row' && 'active'}`} onClick={onRowClick}>
         نمایش ردیفی
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
       </button>
     </div>
   )

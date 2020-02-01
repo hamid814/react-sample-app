@@ -16,6 +16,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  
+  &:hover {
+    color: #a6a57a;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -23,12 +32,15 @@ code {
 
 .btn {
   font-size: 90%;
-  padding: 0.1rem 0.5rem;
+  padding: 0.1rem 0.7rem;
   background: transparent;
   border: 1px solid #888;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-bottom-left-radius: 999px;
 
   &:hover {
     filter: brightness(110%)
