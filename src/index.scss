@@ -7,6 +7,17 @@
   font-family: IRANSANS !important;
 }
 
+:root {
+  --color-1: #dae6f3;
+  --color-2: #9bb6d0;
+  --color-3: #aecfd8;
+  --color-4: #55769a;
+  --color-5: #6c8fb0;
+  --color-6: #7da0c1;
+  --color-7: #3b3f4e;
+  --color-8: #92a8ae;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +32,7 @@ a {
   color: black;
   
   &:hover {
-    color: #a6a57a;
+    color: var(--color-4);
   }
 }
 
@@ -34,7 +45,8 @@ code {
   font-size: 90%;
   padding: 0.1rem 0.7rem;
   background: transparent;
-  border: 1px solid #888;
+  border: 1px solid var(--color-4);
+  color: var(--color-4);
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -59,6 +71,6 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4b3f2f;
+  background-color: var(--color-7);
   border-radius: 9999px;
 }

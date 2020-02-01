@@ -8,6 +8,10 @@ const ProductItem = ({ product }) => {
 
   useEffect(() => {
     for(let i = 0; i < rate; i++) {
+      const star = document.createElement('i')
+    }
+
+    for(let i = 0; i < 5 - rate; i++) {
       console.log(i)
     }
     
