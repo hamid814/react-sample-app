@@ -37,6 +37,7 @@ const Product = ({ match }) => {
   useEffect(() => {
     getSingleProduct(match.params.product_id)
 
+    // eslint-disable-next-line
   }, [])
 
   const numberWithCommas = (x) => {
@@ -60,7 +61,7 @@ const Product = ({ match }) => {
           </div>
           <div className="back">
             <Link to="/">
-              back
+              بازگشت
             </Link>
           </div>
           <div className="content">
@@ -87,8 +88,10 @@ const Product = ({ match }) => {
                   }
                 </div>
               </div>
-              <div className={`btn ${!product.can_add_to_cart && 'deactive'}`}>
-                افزودن به سبد خرید
+              <div className="btn-panel">
+                <div className={`btn ${!product.can_add_to_cart && 'deactive'}`}>
+                  افزودن به سبد خرید
+                </div>
               </div>
               
             </div>

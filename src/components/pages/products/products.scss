@@ -237,3 +237,26 @@
     }
   }
 }
+
+@media(max-width: 800px) {
+  .all-products {
+    margin-top: 70px;
+    width: 96%;
+    
+    &.diplay-table {
+      
+      .products-content {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .control-panel {
+      padding: 0;
+      flex-direction: column;
+
+      .display-type {
+        margin-top: 15px;
+      }
+    }
+  }
+}
