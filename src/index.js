@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.scss';
+import './font.css';
 
 import Navbar from './components/layout/Navbar';
 import Products from './components/pages/products/Products';
