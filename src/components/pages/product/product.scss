@@ -1,0 +1,31 @@
+.product-page-container {
+  border: 1px solid red;
+  width: 80%;
+  margin: 20px auto;
+  text-align: right;
+  background: #f3f3f3;
+  padding: 1rem;
+  
+  .back {
+    border: 1px solid red;
+  }
+  
+  .content {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    .left {
+      flex-grow: 1;
+      padding: 1.5rem;
+    }
+    
+    .right {
+      flex-basis: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

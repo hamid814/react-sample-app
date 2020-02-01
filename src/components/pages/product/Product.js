@@ -1,6 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
 
+import './product.scss';
+
 import Context from '../../../context/Context';
 
 import Loading from '../../layout/Loading';
@@ -14,6 +16,8 @@ const Product = ({ match }) => {
     // eslint-disable-next-line
   }, [])
   
+    console.log(product)
+    
   if(loading) {
     return (
       <>
@@ -23,21 +27,27 @@ const Product = ({ match }) => {
   } else {
     return (
       <>
-        <Link to="/">
-          back
-        </Link>
+        <div className="product-page-container">
+          <div className="alert">
 
-        <br/>
-      
-        single product
-
-        <br/>
-
-        <img src={product.list_image_url} alt={product.title}/>
-
-        {
-          product.title
-        }
+          </div>
+          <div className="back">
+            <Link to="/">
+              back
+            </Link>
+          </div>
+          <div className="content">
+            <div className="right">
+              <img src={product.list_image_url} alt=""/>
+            </div>
+            <div className="left">
+              <div className="title">
+                { product.title }
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </>
     )
   }
