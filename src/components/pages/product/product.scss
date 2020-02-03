@@ -83,7 +83,7 @@
     
     .right {
       flex-basis: 30%;
-
+      
       img {
         width: 100%;
       }
@@ -97,8 +97,9 @@
   padding: 20px;
   background: #f6f6f6;
   border-radius: 7px;
+  margin-bottom: 30vh;
   text-align: right;
-
+  
   .title {
     margin-bottom: 12px;
   }
@@ -115,12 +116,10 @@
 .related-products-container {
   width: 80%;
   margin: 0 auto;
-  margin-top: 28px;
   padding: 20px;
   background: #f6f6f6;
   border-radius: 7px;
   text-align: right;
-  margin-bottom: 30vh;
 
   .title {
     margin-bottom: 12px;
@@ -134,19 +133,13 @@
     padding-bottom: 10px;
   }
 
-  ::-webkit-scrollbar-thumb {
-    width: 2%;
-    height: 2%;
-  }
 }
 
 .offer-product-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  min-width: 20%;
-  max-width: 20%;
-  display: inline-block;
+  min-width: 200px;
+  max-width: 200px;
   margin: {
     top: initial;
     bottom: initial;
@@ -174,8 +167,11 @@
   }
 
   .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-top: 7px;
-    border: 1px solid red;
     
     .title {
       text-align: right;
@@ -195,8 +191,14 @@
       }
 
       .sell-price {
-        color: initial
+        color: initial;
       }
+    }
+
+    .btn {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 10px;
     }
   }
 }

@@ -94,19 +94,6 @@ const Product = ({ match }) => {
             </div>
           </div>
         </div>
-
-        <div className="suggested-products-container">
-          <div className="title">
-            محصولات پیشنهادی
-          </div>
-          <div className="suggested-products-content">
-            {
-              suggested_products.map(p => (
-                <OfferProductItem key={p.id} product={p} />
-              ))  
-            }
-          </div>
-        </div>
         <div className="related-products-container">
           <div className="title">
             محصولات مرتبط
@@ -114,6 +101,18 @@ const Product = ({ match }) => {
           <div className="related-products-content">
             {
               related_products.map(p => (
+                <OfferProductItem key={p.id} product={p} />
+              ))  
+            }
+          </div>
+        </div>
+        <div className="suggested-products-container">
+          <div className="title">
+            محصولات پیشنهادی
+          </div>
+          <div className="suggested-products-content">
+            {
+              suggested_products.map(p => (
                 <OfferProductItem key={p.id} product={p} />
               ))  
             }
