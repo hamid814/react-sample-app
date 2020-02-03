@@ -6,6 +6,7 @@ import './product.scss';
 import Context from '../../../context/Context';
 
 import Loading from '../../layout/Loading';
+import OfferProductItem from './OfferProductItem';
 
 const Product = ({ match }) => {
   const { getSingleProduct, singleProduct: product, loading } = useContext(Context)
@@ -43,8 +44,6 @@ const Product = ({ match }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-  
-                                                console.log(product)
     
   if(loading) {
     return (
@@ -53,45 +52,71 @@ const Product = ({ match }) => {
       </>
     )
   } else {
+    const { title, list_image_url, main_price, sell_price, can_add_to_cart, suggested_products, related_products } = product;
+    
     return (
       <>
         <div className="product-page-container">
           <div className="back">
             <Link to={process.env.PUBLIC_URL + "/"}>
-              بازگشت
+              همه محصولات
             </Link>
           </div>
           <div className="content">
             <div className="right">
-              <img src={product.list_image_url} alt=""/>
+              <img src={list_image_url} alt=""/>
             </div>
             <div className="left">
               <div ref={ratePanel} className="rate-panel">
               
               </div>
               <div className="title">
-                { product.title }
+                { title }
               </div>
               <div className="price-panel">
                 <div className="main-price">
                   {
-                    product.main_price &&
-                    `قیمت: ${numberWithCommas(product.main_price)} ریال`
+                    main_price &&
+                    `قیمت: ${numberWithCommas(main_price)} ریال`
                   }
                 </div>
                 <div className="sell-price">
                   {
-                    `قیمت: ${numberWithCommas(product.sell_price)} ریال`
+                    `قیمت: ${numberWithCommas(sell_price)} ریال`
                   }
                 </div>
               </div>
               <div className="btn-panel">
-                <div className={`btn ${!product.can_add_to_cart && 'deactive'}`}>
+                <div className={`btn ${!can_add_to_cart && 'deactive'}`}>
                   افزودن به سبد خرید
                 </div>
               </div>
-              
             </div>
+          </div>
+        </div>
+
+        <div className="suggested-products-container">
+          <div className="title">
+            محصولات پیشنهادی
+          </div>
+          <div className="suggested-products-content">
+            {
+              suggested_products.map(p => (
+                <OfferProductItem key={p.id} product={p} />
+              ))  
+            }
+          </div>
+        </div>
+        <div className="related-products-container">
+          <div className="title">
+            محصولات مرتبط
+          </div>
+          <div className="related-products-content">
+            {
+              related_products.map(p => (
+                <OfferProductItem key={p.id} product={p} />
+              ))  
+            }
           </div>
         </div>
       </>

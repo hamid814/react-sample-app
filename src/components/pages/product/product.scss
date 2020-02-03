@@ -2,6 +2,7 @@
   width: 80%;
   margin: 30px auto;
   text-align: right;
+  border-radius: 7px;
   background: #f3f3f3;
   padding: 1rem;
 
@@ -90,12 +91,123 @@
   }
 }
 
+.suggested-products-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f6f6f6;
+  border-radius: 7px;
+  text-align: right;
+
+  .title {
+    margin-bottom: 12px;
+  }
+  
+  .suggested-products-content {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+}
+
+.related-products-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 28px;
+  padding: 20px;
+  background: #f6f6f6;
+  border-radius: 7px;
+  text-align: right;
+  margin-bottom: 30vh;
+
+  .title {
+    margin-bottom: 12px;
+  }
+  
+  .related-products-content {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 2%;
+    height: 2%;
+  }
+}
+
+.offer-product-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  min-width: 20%;
+  max-width: 20%;
+  display: inline-block;
+  margin: {
+    top: initial;
+    bottom: initial;
+    right: 10px;
+    left: 10px;
+  }
+  padding-top: 7px;
+  cursor: pointer;
+
+  &:hover {
+    background: #9996;
+  }
+
+  .image {
+    width: 90%;
+    margin: 0 auto;
+    
+    img {
+      width: 100%;
+      border: 3px solid var(--color-8);
+      border-top-right-radius: 9999px;
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+    }
+  }
+
+  .content {
+    margin-top: 7px;
+    border: 1px solid red;
+    
+    .title {
+      text-align: right;
+      white-space: pre-wrap;
+      font-size: 90%;
+      text-align: center;
+      font-weight: 500;
+    }
+    
+    .price-panel {
+      text-align: center;
+      font-size: 85%;
+
+      .main-price {
+        color: #a00a;
+        text-decoration: line-through;
+      }
+
+      .sell-price {
+        color: initial
+      }
+    }
+  }
+}
+
 @media(max-width: 800px) {
   .product-page-container {
+    width: 96%;
     margin-top: 80px;
-
+    
     .content {
-
+      
       .right {
         display: flex;
         justify-content: center;
@@ -106,5 +218,13 @@
         padding-bottom: 4rem;
       }
     }
+  }
+  
+  .suggested-products-container {
+    width: 96%;
+  }
+  
+  .related-products-container {
+    width: 96%;
   }
 }
